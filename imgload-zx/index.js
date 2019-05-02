@@ -1,1 +1,2 @@
-module.exports = require('./lib/HelloWorld.js')
+import ZxImgLoad from "./dist/js/imgLoad.min";
+export default ZxImgLoad;

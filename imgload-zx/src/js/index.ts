@@ -1,55 +1,22 @@
-class ZxImgLoad {
-  imgs: Array<string>;
-  len: Number;
-  success: Boolean;
-  count: Number;
-  error: Array<Object>;
-  options: Object;
+import Imgload from "../utils/imgLoad";
 
-  constructor(imgs: Array<string>, cb: Function) {
-    this.imgs = imgs;
-    this.len = imgs.length;
-    this.success = false;
-    this.count = 0;
-    this.error = [];
-    this.options = this._previewLoad(cb);
-    this.load();
-  }
-  _previewLoad(cb: Function) {
-    return {
-      eachFn(count: Number) {
-        // 传给img加载的个数
-        cb && cb(count);
-      },
-      endFn(flag = false, error = {}) {
-        this.success = flag;
-        this.error.push(error);
-      }
-    }
-  }
-  load() {
-    let _len = this.len,
-      _count = 0,
-      _options = this.options;
-    for (let i = 0; i < _len; i++) {
-      let _src = this.imgs[i];
-      let img = new Image();
-      img.onload = () => {
-        _count++;
-        this.count = _count;
-        _options.eachFn && _options.eachFn.call(this, _count);
-        if (_count >= _len) {
-          _options.endFn && _options.endFn.call(this, true);
-        }
-      }
-      img.onerror = (err) => {
-        let error = {
-          index: i,
-          src: _src
-        };
-        _options.endFn && _options.endFn.call(this, false, error);
-      }
-      img.src = _src;
-    }
-  }
+let _img:ArrayLike<{[propName: string]: any}> = document.querySelectorAll("img");
+let imgs:Array<any> = Array.from(_img);
+let _imgs:Array<any> = imgs.map(val => val.src);
+let len:number = imgs.length;
+let readyRE:RegExp = /complete|loaded|interactive/;
+let ready:Function = function(callback){
+  if (readyRE.test(document.readyState) && document.body) callback()
+  else document.addEventListener('DOMContentLoaded', function(){ callback() }, false)
+  return this
 }
+ready(() => {
+  let hold:{[propName: string]: any} = document.querySelector(".hold");
+  let mask:{[propName: string]: any} = document.querySelector(".mask");
+  new Imgload(_imgs, (num:number) => {
+    hold.style.transform = `translateX(-${(len - num)/len * 100}%)`;
+    if (num == len) {
+      mask.style.display = "none";
+    }
+  });
+})
