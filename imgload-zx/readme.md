@@ -5,6 +5,8 @@
 3. npm run serve
 
 ## 使用插件
+1. npm i imgload-zx
+2. import ImgLoad from "imgload-zx";
 
 ```
 let imgs = [
