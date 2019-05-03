@@ -1,2 +1,2 @@
-import ZxImgLoad from "./dist/js/imgLoad.min";
-export default ZxImgLoad;
+module.exports = require('./lib/imgLoad.min');
+exports.default = require('./lib/imgLoad.min');

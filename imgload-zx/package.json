@@ -1,11 +1,11 @@
 {
   "name": "imgload-zx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "页面预加载",
-  "main": "index.js",
+  "main": "./dist/js/imgLoad.min.js",
   "scripts": {
     "test": "mocha",
-    "dev": "webpack-dev-server --inline",
+    "dev": "webpack-dev-server --inline --config webpack.dev.config.js",
     "build": "webpack -p"
   },
   "author": "spirit108",
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/spiritzx/imgload-zx"
+    "url": "https://github.com/spiritzx/npm-plugins/tree/master/imgload-zx"
   },
   "bugs": {
     "url": "https://github.com/spiritzx/imgload-zx/issues"
   },
-  "homepage": "https://github.com/spiritzx/imgload-zx#readme"
+  "homepage": "https://github.com/spiritzx/imgload-zx/#readme"
 }
