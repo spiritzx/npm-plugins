@@ -1,0 +1,42 @@
+{
+  "name": "imgload-zx",
+  "version": "1.0.1",
+  "description": "页面预加载",
+  "main": "./dist/js/imgLoad.min.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "webpack-dev-server --inline --config webpack.dev.config.js",
+    "build": "webpack -p"
+  },
+  "author": "spirit108",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^3.0.7",
+    "karma": "^4.1.0",
+    "ts-loader": "^5.3.1",
+    "typescript": "^3.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@types/node": "^11.11.1",
+    "should": "^13.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiritzx/npm-plugins/tree/master/imgload-zx"
+  },
+  "bugs": {
+    "url": "https://github.com/spiritzx/imgload-zx/issues"
+  },
+  "homepage": "https://github.com/spiritzx/imgload-zx/#readme"
+}
