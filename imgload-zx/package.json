@@ -1,8 +1,8 @@
 {
   "name": "imgload-zx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "页面预加载",
-  "main": "./dist/js/imgLoad.min.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha",
     "dev": "webpack-dev-server --inline --config webpack.dev.config.js",
