@@ -1,12 +1,13 @@
 {
   "name": "imgload-zx",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "页面预加载",
-  "main": "index.js",
+  "main": "./dist/imgLoad.min.js",
   "scripts": {
+    "start": "npm run dev",
     "test": "mocha",
-    "dev": "webpack-dev-server --inline --config webpack.dev.config.js",
-    "build": "webpack -p"
+    "dev": "webpack-dev-server --inline --config ./build/webpack.dev.config.js",
+    "build": "webpack -p ./build/webpack.dev.js"
   },
   "author": "spirit108",
   "license": "ISC",
