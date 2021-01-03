@@ -1,13 +1,13 @@
 {
   "name": "amount_formate_z",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "金额格式化",
-  "main": "./dist/index.min.js",
+  "main": "dist/amountFormate.min.js",
   "scripts": {
     "start": "npm run dev",
     "test": "mocha",
     "dev": "webpack-dev-server --inline --config ./build/webpack.dev.config.js",
-    "build": "webpack -p --config ./build/webpack.config.js"
+    "build": "webpack --config ./build/webpack.config.js"
   },
   "mocha": {
     "colors": true,
@@ -27,6 +27,8 @@
   "devDependencies": {
     "@types/mocha": "^8.2.0",
     "@types/should": "^13.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.3",
     "html-webpack-plugin": "^4.5.0",

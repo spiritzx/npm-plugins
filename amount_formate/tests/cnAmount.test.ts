@@ -3,9 +3,9 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2021-01-03 15:01:46
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2021-01-03 15:58:38
+ * @LastEditTime: 2021-01-03 19:11:50
  */
-import { cnAmount } from '../src/utils/index';
+import { cnAmount } from '../src/utils/cnAmount';
 import should from 'should';
 
 describe('数字变为中文符号', function () {

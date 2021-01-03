@@ -3,19 +3,16 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2019-05-01 01:40:31
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2021-01-03 16:35:10
+ * @LastEditTime: 2021-01-03 18:40:51
  */
 const path = require("path");
 
 module.exports = {
-  entry: {
-    imgLoad: "./src/utils/index.ts"
-  }, // 入口文件
+  entry: "./src/utils/index.ts", // 入口文件
   output: {
     path: path.resolve(__dirname, "../dist/"), //将js文件打包到dist的目录
-    filename: "index.min.js",
-    library: 'numberWord', // 指定类库名,主要用于直接引用的方式(比如使用script 标签)
-    libraryExport: "default", // 对外暴露default属性，就可以直接调用default里的属性
+    filename: "amountFormate.min.js",
+    library: 'amountFormate', // 指定类库名,主要用于直接引用的方式(比如使用script 标签)
     globalObject: 'this', // 定义全局变量,兼容node和浏览器运行，避免出现"window is not defined"的情况
     libraryTarget: 'umd' // 定义打包方式Universal Module Definition,同时支持在CommonJS、AMD和全局变量使用
   }, // 出口文件
