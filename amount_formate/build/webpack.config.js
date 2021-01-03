@@ -3,7 +3,7 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2019-05-01 01:40:31
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2021-01-02 22:19:26
+ * @LastEditTime: 2021-01-03 16:35:10
  */
 const path = require("path");
 
@@ -13,7 +13,7 @@ module.exports = {
   }, // 入口文件
   output: {
     path: path.resolve(__dirname, "../dist/"), //将js文件打包到dist的目录
-    filename: "[name].min.js",
+    filename: "index.min.js",
     library: 'numberWord', // 指定类库名,主要用于直接引用的方式(比如使用script 标签)
     libraryExport: "default", // 对外暴露default属性，就可以直接调用default里的属性
     globalObject: 'this', // 定义全局变量,兼容node和浏览器运行，避免出现"window is not defined"的情况

@@ -2,7 +2,7 @@
   "name": "amount_formate",
   "version": "0.0.1",
   "description": "金额格式化",
-  "main": "index.js",
+  "main": "./dist/index.min.js",
   "scripts": {
     "start": "npm run dev",
     "test": "mocha",
@@ -40,5 +40,13 @@
   "dependencies": {
     "typescript": "^4.1.3",
     "webpack": "4.27.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiritzx/npm-plugins/tree/master/amount_formate"
+  },
+  "bugs": {
+    "url": "https://github.com/spiritzx/issues"
+  },
+  "homepage": "https://github.com/spiritzx/amount_formate/#readme"
 }
