@@ -1,6 +1,6 @@
 {
-  "name": "amount_formate",
-  "version": "0.0.1",
+  "name": "amount_formate_z",
+  "version": "0.0.2",
   "description": "金额格式化",
   "main": "./dist/index.min.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "url": "https://github.com/spiritzx/npm-plugins/tree/master/amount_formate"
   },
   "bugs": {
-    "url": "https://github.com/spiritzx/issues"
+    "url": "https://github.com/spiritzx/npm-plugins/issues"
   },
-  "homepage": "https://github.com/spiritzx/amount_formate/#readme"
+  "homepage": "https://github.com/spiritzx/npm-plugins/tree/master/amount_formate"
 }
